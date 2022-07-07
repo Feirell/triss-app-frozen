@@ -1,0 +1,22 @@
+{
+  "name": "@triss/state-management",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc -b "
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/client-server-serializer": "workspace:^",
+    "@triss/dto": "workspace:^",
+    "@triss/entity-helper": "workspace:^",
+    "@triss/server-connection": "workspace:^",
+    "redux": "^4.2.0"
+  }
+}

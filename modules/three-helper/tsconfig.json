@@ -1,0 +1,13 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "extends": "../../tsconfig.node16.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "outDir": "./lib"
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}

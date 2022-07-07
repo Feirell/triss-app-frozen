@@ -1,0 +1,6 @@
+.git
+.idea
+perf*
+**/lib
+**/lib-bin
+dist

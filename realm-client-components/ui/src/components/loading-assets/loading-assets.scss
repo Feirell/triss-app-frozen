@@ -1,0 +1,36 @@
+@use "../../root-styles/colors";
+@use "sass:color";
+
+.loading-assets .ui-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .overlap-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+    > h1 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-size: 14em;
+      font-stretch: 115%;
+      text-rendering: geometricPrecision;
+
+      grid-area: 1 / 1 / 1 / 1;
+
+      background-color: colors.$background-color;
+      user-select: none;
+    }
+
+    .base {
+      color: colors.$mixed-color;
+    }
+
+    .discover {
+      color: colors.$header-color;
+      overflow: hidden;
+    }
+  }
+}

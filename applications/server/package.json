@@ -1,0 +1,25 @@
+{
+  "name": "@triss/server",
+  "description": "The actual server application",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc && node -e \"fs.rmSync('../../dist/server/', {recursive: true, force: true}); fs.mkdirSync('../../dist/server/', {recursive: true})\" && yarn bundle --ignore-file ../../.bundleignore --output-directory ../../dist/server",
+    "start": "node lib/index.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/node": "^16",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/agent-sandbox": "workspace:^",
+    "@triss/agent-worker": "workspace:^",
+    "@triss/server-main": "workspace:^",
+    "@triss/server-realm-spawn-interface": "workspace:^"
+  }
+}

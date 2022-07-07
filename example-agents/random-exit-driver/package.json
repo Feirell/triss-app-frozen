@@ -1,0 +1,31 @@
+{
+  "name": "@triss/random-exit-driver",
+  "description": "This is an example agent, which includes collision detection, route planning and spawning. It is meant to give you a quickstart to create your own.",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/node": "^16",
+    "@types/seedrandom": "^3.0.2",
+    "@types/three": "^0.141.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/agent-interface": "workspace:^",
+    "@triss/bounding-box": "workspace:^",
+    "@triss/dto": "workspace:^",
+    "@triss/entities": "workspace:^",
+    "@triss/entity-definition": "workspace:^",
+    "@triss/path-definition": "workspace:^",
+    "@triss/three-helper": "workspace:^",
+    "seedrandom": "^3.0.5",
+    "three": "^0.141.0"
+  }
+}

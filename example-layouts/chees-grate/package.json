@@ -1,0 +1,17 @@
+{
+  "name": "@triss/chees-grate",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/dto": "workspace:^",
+    "@triss/entity-definition": "workspace:^"
+  }
+}

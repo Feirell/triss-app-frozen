@@ -1,0 +1,17 @@
+{
+  "name": "@triss/server-realm-spawn-interface",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/node": "^16",
+    "typescript": "^4.6.4"
+  }
+}

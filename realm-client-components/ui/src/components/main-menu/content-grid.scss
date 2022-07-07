@@ -1,0 +1,49 @@
+.main-menu .main-content {
+  overflow: hidden;
+
+  $header-color: hsl(0deg, 0%, 84%);
+
+  /*
+
+    The content grid
+
+   */
+
+  .dash-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 450px);
+    grid-auto-rows: 225px;
+    gap: 25px;
+    grid-auto-flow: dense;
+    width: 100%;
+
+    .dash-item {
+      border-width: 1px;
+      padding: 25px;
+
+      border-radius: 5px;
+
+      > h3 {
+        font-size: 1.7em;
+        margin-bottom: 12px;
+        font-weight: 300;
+        color: $header-color;
+      }
+    }
+  }
+
+  .grid-one-one {
+    grid-row-end: span 1;
+    grid-column-end: span 1;
+  }
+
+  .grid-two-two {
+    grid-row-end: span 2;
+    grid-column-end: span 2;
+  }
+
+  .grid-three-three {
+    grid-row-end: span 3;
+    grid-column-end: span 3;
+  }
+}

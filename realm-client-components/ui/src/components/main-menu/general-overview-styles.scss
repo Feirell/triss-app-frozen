@@ -1,0 +1,181 @@
+@use "../base-components";
+
+.main-menu .main-content {
+  .entity-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    h3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      line-height: 1.2;
+
+      .name {
+        flex-shrink: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .id {
+        color: grey;
+        font-style: italic;
+
+        margin-left: 4px;
+
+        &::before {
+          content: "#";
+        }
+      }
+    }
+
+    //button {
+    //  margin-top: auto;
+    //  align-self: flex-end;
+    //}
+    //
+
+    .information-container {
+      padding-left: 20px;
+      text-indent: -20px;
+      line-height: 1.2em;
+
+      &:not(:first-of-type) {
+        margin-top: 2px;
+      }
+
+      .information-key {
+        display: inline;
+        margin-right: 0.4em;
+        color: #aaa;
+        font-style: italic;
+
+        &::after {
+          content: ":";
+        }
+      }
+
+      .information-value {
+        display: inline;
+
+        &:empty {
+          &::before {
+            content: "<no-data>";
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: auto;
+
+      > :nth-child(1n + 1) {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  /*
+
+    Add entity container
+
+   */
+
+  .add-entity {
+    @extend .container;
+
+    margin: 40px auto 0px auto;
+    width: 550px;
+
+    h2 {
+      font-size: 2.1em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .length-notice {
+      }
+
+      label {
+        margin-top: 25px;
+        margin-bottom: 10px;
+
+        &[for] {
+          cursor: pointer;
+        }
+      }
+
+      input,
+      textarea {
+        @extend .button--inverse;
+
+        padding: 10px 18px;
+        border-radius: 4px;
+      }
+
+      select {
+        height: 30px;
+      }
+
+      .validation-notice {
+        color: orange;
+        font-style: italic;
+        margin-top: 3px;
+        font-size: 0.7em;
+        display: none;
+      }
+
+      .tried-to-submit input:not(:focus):not(:placeholder-shown):invalid ~ .validation-notice,
+        //.tried-to-submit input:not(:focus):not(:placeholder-shown).invalid ~ .validation-notice
+      {
+        display: unset;
+      }
+
+      input[type="submit"] {
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .radio-group {
+        position: relative;
+
+        .entry-file-option {
+          position: relative;
+          left: 0px;
+          transition: left 0.08s ease-out;
+
+          &:hover:not(.chosen):not(.disabled) {
+            position: relative;
+            left: 5px;
+          }
+        }
+      }
+
+      .entry-file-option {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        margin: 5px 0px;
+
+        label {
+          margin: 0;
+        }
+      }
+    }
+
+    .unable-to-create-reason {
+      margin-top: 20px;
+      color: orange;
+      font-style: italic;
+    }
+  }
+}

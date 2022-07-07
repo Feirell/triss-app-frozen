@@ -1,0 +1,10 @@
+{
+  "name": "example-exp-agent",
+  "description": "This is my exported agent!",
+  "main": "src/index.js",
+  "version": "1.0.0",
+  "dependencies": {
+    "@triss/entity-definition": "workspace:^",
+    "@triss/logger": "workspace:^"
+  }
+}

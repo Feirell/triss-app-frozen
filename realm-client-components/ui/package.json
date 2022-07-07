@@ -1,0 +1,34 @@
+{
+  "name": "@triss/ui",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "sass src/index.scss lib/index.css && tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/three": "^0.141.0",
+    "sass": "^1.52.3",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/3d-rendering": "workspace:^",
+    "@triss/client-server-serializer": "workspace:^",
+    "@triss/dto": "workspace:^",
+    "@triss/entity-definition": "workspace:^",
+    "@triss/entity-helper": "workspace:^",
+    "@triss/instanced-models": "workspace:^",
+    "@triss/message-transport": "workspace:^",
+    "@triss/server-connection": "workspace:^",
+    "@triss/state-management": "workspace:^",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.0",
+    "three": "^0.141.0"
+  }
+}

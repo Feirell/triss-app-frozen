@@ -1,0 +1,19 @@
+{
+  "name": "@triss/entity-definition",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "node build.cjs"
+  },
+  "dependencies": {
+    "@triss/path-definition": "workspace:^",
+    "three": "^0.141.0",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@triss/models": "workspace:^",
+    "@types/node": "^16",
+    "@types/three": "^0.141.0"
+  }
+}

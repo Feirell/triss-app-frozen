@@ -1,0 +1,14 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "extends": "../../tsconfig.node16.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "outDir": "./lib",
+    "experimentalDecorators": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}

@@ -1,0 +1,19 @@
+// Recommended node.js v16 base tsconfig
+// taken from https://github.com/tsconfig/bases#create-react-app-tsconfigjson
+
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "React",
+
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "lib": [
+      "ES2021",
+      "dom",
+      "dom.iterable"
+    ],
+    "jsx": "react",
+    "experimentalDecorators": true
+  }
+}

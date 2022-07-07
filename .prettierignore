@@ -1,0 +1,8 @@
+node_modules
+.idea
+.cache
+AGENT_DIRECTORY_*
+*.html
+*.js
+perf-test
+perf-logs

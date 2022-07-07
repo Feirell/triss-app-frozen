@@ -1,0 +1,24 @@
+.placeable-chooser {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  > * {
+    box-sizing: border-box;
+    height: 100%;
+    //width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: 17px;
+    }
+
+    > *:not(:first-child) {
+      margin-left: 17px;
+    }
+  }
+}

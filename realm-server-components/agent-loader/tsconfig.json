@@ -1,0 +1,15 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Common specific configuration",
+
+  "extends": "../../tsconfig.node16.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "outDir": "./lib",
+    "module": "CommonJS"
+  },
+  "include": [
+    "src"
+  ]
+}

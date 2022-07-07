@@ -1,0 +1,18 @@
+{
+  "name": "@triss/message-transport",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^16",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/performance": "workspace:^",
+    "event-emitter-typesafe": "^0.1.3",
+    "serialization-generator": "^3.2.1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@triss/3d-rendering",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/three": "^0.141.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/dto": "workspace:^",
+    "@triss/entity-definition": "workspace:^",
+    "@triss/frame-rate-diagnostics": "workspace:^",
+    "@triss/instanced-models": "workspace:^",
+    "@triss/logger": "workspace:^",
+    "@triss/server-connection": "workspace:^",
+    "@triss/three-helper": "workspace:^",
+    "event-emitter-typesafe": "^0.1.3",
+    "three": "^0.141.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Client specific configuration",
+
+  "extends": "../../tsconfig.react.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "webworker"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}

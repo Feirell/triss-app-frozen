@@ -1,0 +1,12 @@
+// Recommended node.js v16 base tsconfig
+// taken from https://github.com/tsconfig/bases#node-16-tsconfigjson
+
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 16",
+
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+  }
+}

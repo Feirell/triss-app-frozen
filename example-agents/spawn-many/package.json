@@ -1,0 +1,25 @@
+{
+  "name": "@triss/spawn-many",
+  "description": "This agent spawns a certain amount of vehicles and moves them depending on the simulation time.",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/three": "^0.141.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/agent-interface": "workspace:^",
+    "@triss/dto": "workspace:^",
+    "@triss/entities": "workspace:^",
+    "@triss/logger": "workspace:^",
+    "three": "^0.141.0"
+  }
+}

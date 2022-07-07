@@ -1,0 +1,15 @@
+{
+  "name": "@triss/additional-serializer",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "serialization-generator": "^3.2.1"
+  }
+}

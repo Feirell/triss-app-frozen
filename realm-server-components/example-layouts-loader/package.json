@@ -1,0 +1,25 @@
+{
+  "name": "@triss/example-layouts-loader",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc -b "
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/chees-grate": "workspace:^",
+    "@triss/dto": "workspace:^",
+    "@triss/empty-layout": "workspace:^",
+    "@triss/entities": "workspace:^",
+    "@triss/generated-layout": "workspace:^",
+    "@triss/mini-layout": "workspace:^",
+    "@triss/sample-layout": "workspace:^",
+    "@triss/spawner-grate": "workspace:^"
+  }
+}

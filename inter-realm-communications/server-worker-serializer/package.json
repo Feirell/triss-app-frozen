@@ -1,0 +1,19 @@
+{
+  "name": "@triss/server-worker-serializer",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/agent-loader": "workspace:^",
+    "@triss/dto": "workspace:^",
+    "@triss/entity-helper": "workspace:^",
+    "@triss/entity-serializer": "workspace:^",
+    "serialization-generator": "^3.2.1"
+  }
+}

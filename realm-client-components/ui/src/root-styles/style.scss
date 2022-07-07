@@ -1,0 +1,160 @@
+@use "css-reset.css";
+//@use "../public/resources/variable-roboto/variable-roboto";
+@use "colors";
+
+html,
+body,
+#react-root,
+#react-root > .view-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: colors.$background-color;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+#react-root {
+  // .view-wrapper
+  > .view-wrapper {
+    display: grid;
+
+    grid-template: 1fr / 1fr;
+
+    // .ui-container and .scene-container
+    > .ui-container,
+    .scene-container {
+      // to stack all on the same area
+      grid-area: 1 / 1 / 1 / 1;
+      //z-index: auto;
+    }
+
+    > .scene-container {
+      z-index: 0;
+    }
+
+    > .ui-container {
+      z-index: 1;
+    }
+
+    // all after the base layer should let ui click through
+    > :not(:first-child) {
+      pointer-events: none;
+
+      // the children should catch pointer events
+      > * {
+        pointer-events: initial;
+      }
+    }
+  }
+}
+
+.three-wrapper {
+  display: grid;
+
+  grid-template: 1fr / 1fr;
+
+  > * {
+    // to stack all on the same area
+    grid-area: 1 / 1 / 1 / 1;
+    //z-index: auto;
+  }
+}
+
+.simulation-wrapper,
+.three-wrapper,
+.react-state-render-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.scene-container {
+  overflow: hidden;
+}
+
+// the label container
+.three-wrapper div {
+  position: relative;
+}
+
+.world-state-renderer-label-container > * {
+  transform: translateY(-50%);
+}
+
+//
+//@keyframes FadeIn {
+//  from {
+//    left: 400px;
+//    opacity: 0;
+//  }
+//
+//  to {
+//    left: 0px;
+//    opacity: 1;
+//  }
+//}
+
+//#pick-tile-options {
+//  .annotation {
+//    position: absolute;
+//    z-index: 1;
+//    border: 1px solid grey;
+//    background-color: rgba(40, 40, 40, 0.3);
+//    padding: 4px 6px;
+//    box-sizing: border-box;
+//    font-family: sans-serif;
+//    font-size: 18px;
+//    color: white;
+//    white-space: pre;
+//  }
+//
+//  #tile-search {
+//    display: none;
+//    position: absolute;
+//    right: 10px;
+//    top: 10px;
+//
+//    border: 1px solid rgb(200, 200, 200);
+//    background-color: rgb(220, 220, 220);
+//    font-family: sans-serif;
+//    padding: 6px 10px;
+//    /*box-sizing: border-box;*/
+//  }
+//
+//  #tile-search .line:not(:last-child) {
+//    margin-bottom: 6px;
+//  }
+//
+//  #tile-search .line label {
+//    margin-left: 6px;
+//  }
+//
+//  #tile-search .line:last-of-type {
+//    display: flex;
+//    justify-content: center;
+//  }
+//
+//  #tile-search #connection-chooser {
+//    display: inline-grid;
+//    grid-template-columns: 1fr 1fr 1fr;
+//    grid-template-rows: 1fr 1fr 1fr;
+//  }
+//
+//  #tile-search #connection-chooser #connected-top {
+//    grid-area: 1 / 2 / 1 / 2;
+//  }
+//
+//  #tile-search #connection-chooser #connected-right {
+//    grid-area: 2 / 3 / 2 / 3;
+//  }
+//
+//  #tile-search #connection-chooser #connected-bottom {
+//    grid-area: 3 / 2 / 3 / 2;
+//  }
+//
+//  #tile-search #connection-chooser #connected-left {
+//    grid-area: 2 / 1 / 2 / 1;
+//  }
+//}

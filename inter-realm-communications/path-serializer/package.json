@@ -1,0 +1,18 @@
+{
+  "name": "@triss/path-serializer",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/three": "^0.141.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/path-definition": "workspace:^",
+    "serialization-generator": "^3.2.1",
+    "three": "^0.141.0"
+  }
+}

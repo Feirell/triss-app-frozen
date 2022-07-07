@@ -1,0 +1,19 @@
+{
+  "name": "@triss/path-definition",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc -b "
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@types/three": "^0.141.0",
+    "three": "^0.141.0"
+  }
+}

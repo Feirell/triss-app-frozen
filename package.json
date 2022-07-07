@@ -1,0 +1,38 @@
+{
+  "name": "triss",
+  "version": "1.0.0",
+  "description": "Traffic Interaction Simulation Software",
+  "private": true,
+  "author": "Florian Völker <Neirolf2030@web.de>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.0",
+  "workspaces": [
+    "modules/*",
+    "applications/*",
+    "example-agents/*",
+    "example-layouts/*",
+    "realms/*",
+    "realm-server-components/*",
+    "realm-client-components/*",
+    "inter-realm-communications/*",
+    "applications/*",
+    "dynamic-agents/*"
+  ],
+  "yarn.build": {
+    "input": "src",
+    "output": "lib"
+  },
+  "scripts": {
+    "w": "node ./scripts/w.cjs",
+    "clean": "rm -r */*/lib && rm -r */*/lib-bin",
+    "applications-install": "yarn workspaces focus triss @triss/server @triss/client",
+    "applications-build": "yarn workspaces foreach --verbose --parallel --topological-dev --recursive --from \"{@triss/server,@triss/client}\" run build",
+    "lint": "eslint --fix --ext .ts,.tsx .",
+    "format": "prettier --write .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "chalk": "^4",
+    "yargs": "^17.5.1"
+  }
+}

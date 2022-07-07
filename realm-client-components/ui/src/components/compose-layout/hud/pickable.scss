@@ -1,0 +1,44 @@
+.pickable {
+  height: 100%;
+  width: 175px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+
+  border-radius: 3px;
+
+  padding: 12px 18px;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: border 0.125s ease-out, background-color 0.125s ease-out;
+
+  &:hover:not(.picked) {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.175);
+  }
+
+  &:not(.picked) {
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  &.picked {
+    border: 1px solid rgba(131, 162, 255, 0.15);
+    background-color: rgba(131, 162, 255, 0.175);
+  }
+
+  h4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .preview {
+    flex-grow: 1;
+    //width: 10;
+  }
+}

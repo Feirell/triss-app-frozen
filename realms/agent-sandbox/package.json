@@ -1,0 +1,20 @@
+{
+  "name": "@triss/agent-sandbox",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^16",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@triss/agent-loader": "workspace:^",
+    "@triss/logger": "workspace:^",
+    "@triss/server-realm-spawn-interface": "workspace:^",
+    "@triss/server-sandbox-messages": "workspace:^",
+    "source-map-support": "^0.5.21"
+  }
+}

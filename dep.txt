@@ -1,0 +1,52 @@
+➤ YN0000: [triss]: * @typescript-eslint/parser: .\.eslintrc.json
+➤ YN0000: [triss]: * eslint-plugin-react: .\.eslintrc.json
+➤ YN0000: [triss]: * @typescript-eslint/eslint-plugin: .\.eslintrc.json
+➤ YN0000: [triss]: * eslint-plugin-import: .\.eslintrc.json
+➤ YN0000: [@triss/server]: * node-graceful: .\src\graceful.ts
+➤ YN0000: [@triss/entity-serializer]: * @types/node
+➤ YN0000: [@triss/server-worker-serializer]: * @triss/entity-helper
+➤ YN0000: [@triss/entity-definition]: * typescript
+➤ YN0000: [@triss/models]: * typescript
+➤ YN0000: [@triss/models]: * @triss/models: .\src\common\mode-path-helper.ts
+➤ YN0000: [@triss/state-management]: * @triss/entities
+➤ YN0000: [@triss/state-management]: * @triss/entity-definition
+➤ YN0000: [@triss/state-management]: * @triss/entity-serializer
+➤ YN0000: [@triss/state-management]: * @triss/frame-rate-diagnostics
+➤ YN0000: [@triss/state-management]: * @triss/instanced-models
+➤ YN0000: [@triss/state-management]: * @triss/logger
+➤ YN0000: [@triss/state-management]: * @triss/message-transport
+➤ YN0000: [@triss/state-management]: * @triss/three-helper
+➤ YN0000: [@triss/state-management]: * event-emitter-typesafe
+➤ YN0000: [@triss/state-management]: * three
+➤ YN0000: [@triss/state-management]: * @types/three
+➤ YN0000: [@triss/agent-interface]: * @types/node
+➤ YN0000: [@triss/agent-loader]: * chainable-error
+➤ YN0000: [@triss/example-agents-loader]: * @triss/random-exit-driver
+➤ YN0000: [@triss/example-agents-loader]: * @triss/spawn-many
+➤ YN0000: [@triss/example-agents-loader]: * @types/node
+➤ YN0000: [@triss/example-layouts-loader]: * three
+➤ YN0000: [@triss/example-layouts-loader]: * @types/node
+➤ YN0000: [@triss/example-layouts-loader]: * @types/three
+➤ YN0000: [@triss/agent-worker]: * @triss/bounding-box: .\src\simulation\context.ts
+➤ YN0000: [@triss/agent-worker]: * @triss/three-helper: .\src\simulation\context.ts
+➤ YN0000: [@triss/agent-worker]: * @triss/entity-definition: .\src\simulation\context.ts
+➤ YN0000: [@triss/agent-worker]: * @triss/path-definition: .\src\simulation\context.ts
+➤ YN0000: [@triss/client]: * redux-thunk
+➤ YN0000: [@triss/client]: * @babel/core
+➤ YN0000: [@triss/client]: * @babel/plugin-proposal-class-properties
+➤ YN0000: [@triss/client]: * @babel/plugin-proposal-decorators
+➤ YN0000: [@triss/client]: * @babel/plugin-transform-runtime
+➤ YN0000: [@triss/client]: * @babel/preset-env
+➤ YN0000: [@triss/client]: * @babel/preset-react
+➤ YN0000: [@triss/client]: * @babel/preset-typescript
+➤ YN0000: [@triss/client]: * @babel/runtime
+➤ YN0000: [@triss/client]: * @types/redux-thunk
+➤ YN0000: [@triss/client]: * babel-loader
+➤ YN0000: [@triss/client]: * css-loader
+➤ YN0000: [@triss/client]: * file-loader
+➤ YN0000: [@triss/client]: * resolve-url-loader
+➤ YN0000: [@triss/client]: * sass-loader
+➤ YN0000: [@triss/client]: * typescript
+➤ YN0000: [@triss/client]: * webpack-cli
+➤ YN0000: [@triss/client]: * webpack-dev-server
+➤ YN0000: [@triss/client-main]: * @types/node

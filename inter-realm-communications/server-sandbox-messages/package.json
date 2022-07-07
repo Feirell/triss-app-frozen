@@ -1,0 +1,12 @@
+{
+  "name": "@triss/server-sandbox-messages",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}

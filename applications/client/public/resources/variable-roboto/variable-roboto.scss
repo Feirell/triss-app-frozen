@@ -1,0 +1,15 @@
+$font-path: "roboto-flex.woff2";
+//$font-base: './';
+
+// TrueTypeFont converted via: https://henry.codes/writing/how-to-convert-variable-ttf-font-files-to-woff2/
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Roboto";
+    src: url($font-path) format("woff2 supports variations"),
+      url($font-path) format("woff2-variations"), url($font-path) format("woff2");
+
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+  }
+}

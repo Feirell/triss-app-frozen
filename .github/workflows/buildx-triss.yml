@@ -1,0 +1,106 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Buildx TRISS
+
+on:
+  push:
+#    branches:
+#      - 'release'
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-workspaces:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit if not on release branch
+        if: endsWith(github.ref, 'release') == false
+        run: exit -1
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build client and server workspaces
+        uses: docker/build-push-action@v3
+        with:
+          push: false
+          target: build
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          file: multi.Dockerfile
+
+  build-client-image:
+    runs-on: ubuntu-latest
+    needs: build-workspaces
+    steps:
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Docker meta
+        id: client-meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            trissapp/triss-client
+          tags: |
+            type=ref,event=branch
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+
+      - name: Build client image
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          target: client
+          tags: ${{ steps.client-meta.outputs.tags }}
+          labels: ${{ steps.client-meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          file: multi.Dockerfile
+
+  build-server-image:
+    runs-on: ubuntu-latest
+    needs: build-workspaces
+    steps:
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Docker meta
+        id: server-meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            trissapp/triss-server
+          tags: |
+            type=ref,event=branch
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+
+      - name: Build server image
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          target: server
+          tags: ${{ steps.server-meta.outputs.tags }}
+          labels: ${{ steps.server-meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          file: multi.Dockerfile
